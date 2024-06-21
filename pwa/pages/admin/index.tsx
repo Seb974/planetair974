@@ -7,6 +7,7 @@ const Admin = () => {
   useEffect(() => {
     (async () => {
       const HydraAdmin = (await import("@api-platform/admin")).HydraAdmin;
+      console.log(HydraAdmin);
 
       setDynamicAdmin(<HydraAdmin entrypoint={window.origin}></HydraAdmin>);
     })();
